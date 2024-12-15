@@ -49,15 +49,9 @@ impl UnitConverter {
         to_unit: &str,
         root_font_size_px: f64,
     ) -> Result<f64, String> {
-        let from_converter = self
-            .converters
-            .get(from_unit)
-            .ok_or_else(|| format!("Unsupported unit: '{}'.", from_unit))?;
+        let from_converter = self.converters.get(from_unit).unwrap();
 
-        let to_converter = self
-            .converters
-            .get(to_unit)
-            .ok_or_else(|| format!("Unsupported unit: '{}'.", to_unit))?;
+        let to_converter = self.converters.get(to_unit).unwrap();
 
         let value_in_px = from_converter.to_px(value, root_font_size_px);
         Ok(to_converter.from_px(value_in_px, root_font_size_px))

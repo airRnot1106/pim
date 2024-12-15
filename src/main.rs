@@ -16,6 +16,11 @@ fn main() {
     let units: Vec<Box<dyn ConvertibleUnit>> = vec![Box::new(Px), Box::new(Em), Box::new(Rem)];
     let converter = UnitConverter::new(units);
 
+    if !converter.list_units().contains(&args.unit) {
+        eprintln!("Error: Unsupported unit: '{}'.", args.unit);
+        return;
+    }
+
     // process unit conversions
     for target_unit in converter.list_units() {
         match converter.convert(args.value, &args.unit, &target_unit, args.root_font_size_px) {
