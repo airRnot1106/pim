@@ -30,6 +30,7 @@
             rust-analyzer
           ];
         };
+        packages.default = pkgs.callPackage ./nix/pim.nix { };
       }
     );
 }
