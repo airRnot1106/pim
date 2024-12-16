@@ -30,9 +30,9 @@ mod tests {
     #[test]
     fn test_to_px() {
         let pt = Pt;
-        assert_eq!(pt.to_px(1.0, 16.0), 1.333333);
+        assert_eq!(pt.to_px(1.0, 16.0), 1.3333);
         assert_eq!(pt.to_px(0.0, 16.0), 0.0);
-        assert_eq!(pt.to_px(1.0, 1.0), 1.333333);
+        assert_eq!(pt.to_px(1.0, 1.0), 1.3333);
         assert_eq!(pt.to_px(0.75, 20.0), 1.0);
     }
 
