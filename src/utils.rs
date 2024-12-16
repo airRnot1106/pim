@@ -8,3 +8,9 @@ pub fn format_number(num: f64) -> String {
         num.to_string()
     }
 }
+
+/// Round a float to the specified number of decimal places
+pub fn round_to_places(value: f64, places: u32) -> f64 {
+    let factor = 10f64.powi(places as i32);
+    (value * factor).round() / factor
+}
