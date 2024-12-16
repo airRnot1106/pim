@@ -33,9 +33,9 @@
    ./target/release/pim --help
    ```
 
-### Using `nix`
+### Using `Nix`
 
-If you have `nix` installed:
+If you have `Nix` installed:
 ```bash
 nix run . -- --help
 ```
