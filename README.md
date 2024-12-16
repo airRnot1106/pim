@@ -3,7 +3,7 @@
 
 # pim
 
-## a lightweight converter for CSS units (e.g., "px", "em", "rem").
+## a lightweight converter for CSS units
 
 </samp>
 </div>
@@ -53,7 +53,10 @@ pim 24 px
 
 **Output**:
 ```
+Input: 24px
+
 px: 24px
+pt: 18pt
 em: 1.5em
 rem: 1.5rem
 ```
@@ -67,7 +70,10 @@ pim 24 px -r 10
 
 **Output**:
 ```
+Input: 24px
+
 px: 24px
+pt: 18pt
 em: 2.4em
 rem: 2.4rem
 ```
