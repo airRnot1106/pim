@@ -40,9 +40,9 @@ mod tests {
     fn test_from_px() {
         let px = Px;
         // `from_px` should return the same value for `px`
-        assert_eq!(px.to_px(10.0, 16.0), 10.0);
-        assert_eq!(px.to_px(0.0, 16.0), 0.0);
-        assert_eq!(px.to_px(1.0, 1.0), 1.0);
-        assert_eq!(px.to_px(1.0, 20.0), 1.0);
+        assert_eq!(px.from_px(10.0, 16.0), 10.0);
+        assert_eq!(px.from_px(0.0, 16.0), 0.0);
+        assert_eq!(px.from_px(1.0, 1.0), 1.0);
+        assert_eq!(px.from_px(1.0, 20.0), 1.0);
     }
 }
