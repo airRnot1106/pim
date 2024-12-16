@@ -3,7 +3,7 @@
 
 # pim
 
-## a lightweight and extensible CLI tool for converting between various CSS-related units (e.g., "px", "em", "rem").
+## a lightweight converter for CSS units (e.g., "px", "em", "rem").
 
 </samp>
 </div>
