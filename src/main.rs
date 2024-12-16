@@ -7,14 +7,15 @@ mod utils;
 use args::Args;
 use clap::Parser;
 use core::{converter::UnitConverter, unit::ConvertibleUnit};
-use ext::units::{em::Em, px::Px, rem::Rem};
+use ext::units::{em::Em, pt::Pt, px::Px, rem::Rem};
 
 fn main() {
     // parse CLI arguments
     let args = Args::parse();
 
     // register units and create the converter
-    let units: Vec<Box<dyn ConvertibleUnit>> = vec![Box::new(Px), Box::new(Em), Box::new(Rem)];
+    let units: Vec<Box<dyn ConvertibleUnit>> =
+        vec![Box::new(Px), Box::new(Pt), Box::new(Em), Box::new(Rem)];
     let converter = UnitConverter::new(units);
 
     if !converter.list_units().contains(&args.unit) {
