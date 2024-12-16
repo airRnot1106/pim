@@ -23,6 +23,8 @@ fn main() {
         return;
     }
 
+    println!("Input: {}{}\n", args.value, args.unit);
+
     // process unit conversions
     for target_unit in converter.list_units() {
         match converter.convert(args.value, &args.unit, &target_unit, args.root_font_size_px) {
